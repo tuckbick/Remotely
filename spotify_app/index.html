@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+
+        <!-- Spotify CSS files -->
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/eve.css">
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/api.css">
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/player.css">
+        <link rel="stylesheet" type="text/css" href="sp://resources/css/list.css">
+
+        <!-- Project CSS files -->
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="index" class="section">
+
+                <h1>Spotify Remote</h1>
+
+                <img src="/img/spotify-char.png" class="right" />
+
+                <div class="row">
+                    <label for="phone"><h4>Remote Channel:</h4></label>
+                    <input type="text" required id="channel" />
+                    <button id="save" disabled>Save</button>
+                </div>
+
+                <div class="row">
+                    <p>http://localhost:3000/<span id="channel-safe"></span></p>
+                </div>
+
+                <br />
+                
+                <div class="row">
+                    <label for="phone"><h4>Text URL to Phone Number:</h4></label>
+                    <input type="tel" required id="phone" />
+                    <button id="send">Send</button>
+                </div>
+
+            </div>
+        </div>
+        <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>

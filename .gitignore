@@ -1,0 +1,4 @@
+config.js
+.sass-cache
+*.swp
+server/node_modules/*

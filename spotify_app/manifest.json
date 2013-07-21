@@ -1,0 +1,36 @@
+{
+	"AppDescription": {
+		"en": "A tutorial app for Spotify Apps API"
+	},
+	"AppIcon": {
+		"36x18": "tutorial.png"
+	},
+	"AppName": {
+		"en": "Spotify Remote"
+	},
+	"BundleIdentifier": "spotify-remote",
+	"BundleType": "Application",
+	"BundleVersion": "0.1",
+	"DefaultTabs": [
+		{
+			"arguments": "index",
+			"title": {
+				"en": "Home"
+			}
+		}
+	],
+	"Dependencies": {
+	  "api": "0.2.3",
+	  "util": "0.1.0",
+	  "resources": "0.2.2"
+  },
+	"RequiredInterface": 1,
+	"RequiredPermissions": [
+		"http://localhost:80",
+		"http://localhost:3000"
+	],
+	"SupportedLanguages": [
+		"en"
+	],
+	"VendorIdentifier": "co.tuckbick"
+}
