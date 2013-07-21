@@ -3,7 +3,7 @@ var sp = getSpotifyApi(),
     models = sp.require("$api/models"),
     player = models.player;
 
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('http://spotifyremote-8522.onmodulus.net/');
 
 var room = localStorage.getItem('SpotifyRemoteRoom');
 
