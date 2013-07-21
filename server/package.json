@@ -1,0 +1,15 @@
+{
+  "name": "spotify-remote",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "dependencies": {
+    "express": "3.3.4",
+    "ejs": "*",
+    "lastfm": "*",
+    "twilio": "*",
+    "socket.io": "*",
+    "underscore": "*",
+    "modulus": "*"
+  }
+}
