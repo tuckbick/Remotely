@@ -116,21 +116,26 @@ var get_status = function(socket, room) {
 }
 
 var status = function(socket, room, data) {
-  get_artwork(data.artist, data.album, 'extralarge', function(url) {
+  get_artwork(data.track, data.artist, data.album, 'extralarge', function(url) {
     data.art = url
     io.sockets.in(room).emit('status', data);
     console.log(socket.id + ' | ' + room + ' | STAT ' +JSON.stringify(data));
   });
 }
 
-var get_artwork = function(artist, album, size, cb) {
-  var request = lastfm.request("album.getInfo", {
+var get_artwork = function(track, artist, album, size, cb) {
+  var request = lastfm.request("album.search", {
+    track: track,
     artist: artist,
     album: album,
     handlers: {
       success: function(res) {
-        console.log(res);
-        var art = _.find(res.album.image, function(art, i) {
+        var albums = res.results.albummatches.album;
+        if (!albums.length) {
+          cb('/img/no-album.png')
+          return;
+        }
+        var art = _.find(albums[0].image, function(art, i) {
           return art.size === size
         });
         cb(art['#text'])
