@@ -9,17 +9,16 @@ socket.emit('setup_room', room, function() {
 });
 
 socket.on('status', function(new_state) {
-    $('#artwork').on('load', function() {
+    $('#artwork_img').on('load', function() {
         state = new_state;
         on_art_load(state);
     }).attr('src', new_state.art);
 });
 
 var on_art_load = function(state) {
-    $('#artwork').attr('src', state.art)
     $('#toggle_play').html(state.playing?'Pause':'Play');
     $('#title').html(state.title);
-    $('#artist').html(state.artist);
+    $('#artist').html('by '+state.artist);
 }
 
 $('#toggle_play').click(function() {

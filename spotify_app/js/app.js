@@ -3,7 +3,8 @@ var sp = getSpotifyApi(),
     models = sp.require("$api/models"),
     player = models.player;
 
-var socket = io.connect('http://spotifyremote-8522.onmodulus.net/');
+var socket = io.connect('http://localhost:3000');
+// var socket = io.connect('http://spotifyremote-8522.onmodulus.net/');
 
 var room = localStorage.getItem('SpotifyRemoteRoom');
 
@@ -25,9 +26,9 @@ socket.emit('setup_room', room, function(_room) {
 var get_status = function() {
     var state = {
         playing: player.playing,
-        title: player.track?player.track.name:'none',
-        album: player.track?player.track.album.name:'none',
-        artist: player.track?player.track.artists.join(', '):'none'
+        title: player.track?player.track.name:null,
+        album: player.track?player.track.album.name:null,
+        artist: player.track?player.track.artists.join(', '):null
     };
     return state;
 }

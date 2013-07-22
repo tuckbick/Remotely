@@ -108,56 +108,47 @@ pre .regexp {
 html {
   cursor: default;
   font: 12px/17px "Lucida Grande", "Tahoma", "Arial", sans-serif;
-  -webkit-user-select: auto;
-  color: #767676;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.77);
+  -webkit-user-select: none;
 }
 
-/* line 11, main.scss */
+/* line 9, main.scss */
 body {
   min-height: 100%;
   padding: 10px 0 20px;
   box-sizing: border-box;
 }
 
-/* line 12, main.scss */
-html, body {
-  background-color: #ecebe8;
-}
-
-/* line 13, main.scss */
+/* line 10, main.scss */
 #wrapper {
   position: relative;
   z-index: 2;
-  min-height: 100%;
   margin: 0 auto;
-  padding: 20px;
 }
 
-/* line 14, main.scss */
+/* line 11, main.scss */
 section {
   position: relative;
   overflow: hidden;
   margin: 0 0 40px;
 }
 
-/* line 15, main.scss */
+/* line 12, main.scss */
 .breadcrumb, .gist {
   margin: 0 0 20px;
 }
 
-/* line 16, main.scss */
+/* line 13, main.scss */
 .right {
   float: right;
 }
 
-/* line 17, main.scss */
+/* line 14, main.scss */
 h3 + div {
   margin: 0 0 35px;
 }
 
 /* Headers */
-/* line 21, main.scss */
+/* line 18, main.scss */
 h1, h2, h3, h4 {
   margin: 0 0 15px;
   color: #303031;
@@ -166,7 +157,7 @@ h1, h2, h3, h4 {
 }
 
 /* Text */
-/* line 29, main.scss */
+/* line 26, main.scss */
 .description {
   font-size: 1.5em;
   font-style: italic;
@@ -176,25 +167,25 @@ h1, h2, h3, h4 {
 }
 
 /* Player */
-/* line 33, main.scss */
+/* line 30, main.scss */
 #player {
   min-height: 140px;
 }
 
-/* line 34, main.scss */
+/* line 31, main.scss */
 #player .sp-player {
   float: left;
   margin-right: 10px;
 }
 
-/* line 35, main.scss */
+/* line 32, main.scss */
 #player .sp-list {
   width: inherit;
   max-height: inherit;
 }
 
 /* Drop Box */
-/* line 39, main.scss */
+/* line 36, main.scss */
 #drop_box {
   border: 4px dashed #333;
   width: 100%;
@@ -202,95 +193,115 @@ h1, h2, h3, h4 {
   padding: 10px;
 }
 
-/* line 40, main.scss */
+/* line 37, main.scss */
 #drop_box.over {
   opacity: 0.8;
   border-color: #74c043;
 }
 
 /* Index */
-/* line 43, main.scss */
+/* line 40, main.scss */
 #index a:hover {
   color: #83be20;
 }
 
-/* line 50, main.scss */
+/* line 48, main.scss */
+html, body {
+  background-color: #ecebe8;
+}
+
+/* line 51, main.scss */
+html, body, #wrapper {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 60, main.scss */
 #index h1 {
   font-size: 48px;
   line-height: 83px;
   margin-bottom: 1em;
 }
 
-/* line 55, main.scss */
-.row {
-  display: table;
-  margin-bottom: 27px;
-}
-
-/* line 59, main.scss */
+/* line 65, main.scss */
 input, button {
-  border-radius: 3px;
   border: 0;
-  padding: 7px;
   margin: 0;
-  float: left;
-  margin-right: 10px;
 }
 
-/* line 67, main.scss */
+/* line 69, main.scss */
 input {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.5);
   width: 256px;
   font-size: 24px;
 }
-/* line 72, main.scss */
+/* line 74, main.scss */
 input:focus {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 76, main.scss */
+/* line 79, main.scss */
 button {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
   font-size: 16px;
-  height: 42px;
-  width: 75px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.05);
   color: black;
 }
-/* line 86, main.scss */
+/* line 84, main.scss */
 button:focus, button:hover {
   color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
 }
-/* line 91, main.scss */
+/* line 88, main.scss */
 button:active {
-  box-shadow: none;
-  position: relative;
-  bottom: -1px;
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 99, main.scss */
+/* line 93, main.scss */
 input, button {
-  -webkit-transition: color 200ms linear, box-shadow 200ms linear, position 200ms linear;
-  -moz-transition: color 200ms linear, box-shadow 200ms linear, position 200ms linear;
-  -o-transition: color 200ms linear, box-shadow 200ms linear, position 200ms linear;
-  transition: color 200ms linear, box-shadow 200ms linear, position 200ms linear;
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  transition: color 200ms linear;
 }
 
-/* line 103, main.scss */
-.row.img, #artwork {
+/* line 98, main.scss */
+#artwork, #artwork_img, #status, #controls {
   width: 100%;
 }
 
-@media (max-width: 480px) {
-  /* line 108, main.scss */
-  #wrapper {
-    padding: 0 10px 10px;
-  }
+/* line 102, main.scss */
+#status {
+  position: absolute;
+  bottom: 50px;
+  height: 50px;
+  background: silver;
+  text-align: center;
+  line-height: 50px;
+}
 
-  /* line 111, main.scss */
+/* line 111, main.scss */
+#controls {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  background: silver;
+}
+
+/* line 118, main.scss */
+#prev, #toggle_play, #next {
+  width: 33.33333%;
+  display: block;
+  float: left;
+  height: 50px;
+}
+
+@media (max-width: 480px) {
+  /* line 126, main.scss */
   #index h1 {
     font-size: 20px;
     line-height: 36px;
