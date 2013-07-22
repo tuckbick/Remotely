@@ -129,13 +129,14 @@ var get_artwork = function(artist, album, size, cb) {
     album: album,
     handlers: {
       success: function(res) {
+        console.log(res);
         var art = _.find(res.album.image, function(art, i) {
           return art.size === size
         });
         cb(art['#text'])
       },
       error: function(error) {
-        cb('http://userserve-ak.last.fm/serve/500/53231285/The+Fool+Cover.png')
+        cb('/img/no-album.png')
       }
     }
   });

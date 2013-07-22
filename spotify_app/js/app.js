@@ -23,15 +23,12 @@ socket.emit('setup_room', room, function(_room) {
 });
 
 var get_status = function() {
-    var state = null;
-    if (player.track) {
-        state = {
-            playing: player.playing,
-            title: player.track.name,
-            album: player.track.album.name,
-            artist: player.track.artists.join(', ')
-        }
-    }
+    var state = {
+        playing: player.playing,
+        title: player.track?player.track.name:'none',
+        album: player.track?player.track.album.name:'none',
+        artist: player.track?player.track.artists.join(', '):'none'
+    };
     return state;
 }
 
